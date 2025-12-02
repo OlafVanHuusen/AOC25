@@ -1,6 +1,6 @@
 require 'aoc_utils'
 
-@facts_dict = {2 => [1], 3 => [1], 4 => [2], 5 => [5], 6 => [3,2], 7 => [1], 8 => [4], 9 => [3], 10 => [5,2], 11 => [1], 12 => [6]}
+@facts_dict = {2 => [1], 3 => [1], 4 => [2], 5 => [1], 6 => [3,2], 7 => [1], 8 => [4], 9 => [3], 10 => [5,2], 11 => [1], 12 => [6]}
 
 def main
   ranges_strings = AocUtils.read_strings('Day 2/input.txt').flatten
