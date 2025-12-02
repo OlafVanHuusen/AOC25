@@ -11,14 +11,17 @@ def main
     full_rotations = input[x] / 100
     info[1] += full_rotations
     input[x] -= full_rotations * 100
+    was_zero = info[0] == 0
     info[0] = (info[0] + left_rights[x] * input[x])
     if info[0] >= 100 || info[0] < 0
-      info[1] += 1
+      info[1] += 1 if !was_zero
       info[0] = info[0] % 100
-  end
+    elsif info[0] == 0
+      info[1] += 1
+    end
   info
-end
-print infos
-end
+  end
+  print infos
+  end
 
 main
