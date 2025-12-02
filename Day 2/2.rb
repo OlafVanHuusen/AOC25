@@ -1,8 +1,8 @@
 require 'aoc_utils'
-
 @facts_dict = {2 => [1], 3 => [1], 4 => [2], 5 => [1], 6 => [3,2], 7 => [1], 8 => [4], 9 => [3], 10 => [5,2], 11 => [1], 12 => [6]}
 
 def main
+  startTime = Time.now
   ranges_strings = AocUtils.read_strings('Day 2/input.txt').flatten
   ranges = ranges_strings.map { |range_string| range_string_to_array(range_string) }
   ranges = ranges.reduce([]) do |acc, range|
@@ -12,6 +12,8 @@ def main
   #sum = ranges.reduce(0) { |acc, range| acc + find_all_invalid_ids_part1(range).sum }
   sum = ranges.reduce(0) { |acc, range| acc + find_all_invalid_ids_part2(range).sum }
   print sum
+  endTime = Time.now
+  puts "\nTime taken: #{endTime - startTime} seconds"
 end
 
 # === Part 2 ===
