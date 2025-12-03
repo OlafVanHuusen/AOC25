@@ -1,6 +1,7 @@
 require 'aoc_utils'
 
 def main
+  start_time = Time.now
   left_rights = []
   input = AocUtils.read_ints('Day 1/input.txt', left_rights).flatten
   left_rights.map! { |char| char == 'L' ? -1 : 1 }
@@ -22,6 +23,10 @@ def main
   info
   end
   print infos
-  end
+  end_time = Time.now
+  execution_time = end_time - start_time
+  puts "\nExecution time: #{execution_time} seconds"
+end
+
 
 main
