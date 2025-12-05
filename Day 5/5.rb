@@ -1,29 +1,25 @@
 require 'aoc_utils'
 
 def main
-  # === Part 1 ===
-=begin
   time_start = Time.now
   fresh_food_ranges, available_food_ids = AocUtils.read_two_parts('Day 5/input.txt', 'Integer', 'Integer')
-  available_food_ids.flatten!
   fresh_food_ranges.map! { |range| [range[0], -range[1]] }
-  available_food_ids.sort!
   fresh_food_ranges.sort!
+
+  # === Part 1 ===
+=begin
+  available_food_ids.flatten!
+  available_food_ids.sort!
   print zipish_count_a1_in_a2(available_food_ids, fresh_food_ranges)
-  time_end = Time.now
-  puts "\nExecution Time: #{(time_end - time_start) * 1000} ms"
 =end
 
   # === Part 2 ===
-  time_start = Time.now
-  fresh_food_ranges, _ = AocUtils.read_two_parts('Day 5/input.txt', 'Integer', 'Integer')
-  fresh_food_ranges.map! { |range| [range[0], -range[1]] }
-  fresh_food_ranges.sort!
   fresh_food_ranges = clean_up_ranges(fresh_food_ranges)
   print fresh_food_ranges.reduce(0) { |sum, range| sum + (range[1] - range[0] + 1) }
+
+
   time_end = Time.now
   puts "\nExecution Time: #{(time_end - time_start) * 1000} ms"
-
 end
 
 # === Part 2 Helper ===
