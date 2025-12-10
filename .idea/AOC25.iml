@@ -12,5 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="aoc_utils (v0.1.7, ruby-3.3.6-p108) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.2, ruby-3.3.6-p108) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="z3 (v0.0.20251017, ruby-3.3.6-p108) [gem]" level="application" />
   </component>
 </module>
