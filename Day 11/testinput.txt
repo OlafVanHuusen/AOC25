@@ -1,4 +1,7 @@
-svr: aaa bbb
+svr: aaa bbb ttt zzz
+ttt: yyy
+zzz: yyy
+yyy: fft
 aaa: fft
 fft: ccc
 bbb: tty
